@@ -1,4 +1,4 @@
-module.exports = (body) => {
+module.exports = (app) => {
 	return `<!DOCTYPE html>
 <html>
 	<head>
@@ -21,7 +21,7 @@ module.exports = (body) => {
 		<script src="assets/javascript/keymaster.js"></script>
 	</head>
 	<body>
-		<div id="root">${body}</div>
+		<div id="root">${app}</div>
 		<div class='presentation'>
 			<canvas id='canvas'></canvas>
 			<div class='title'>The Retro</div>
