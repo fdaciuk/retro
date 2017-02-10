@@ -14,7 +14,7 @@ fs.readdirSync('node_modules')
 
 module.exports = [{
 	target: 'electron',
-	devtool: isProd ? 'hidden-source-map' : 'cheap-eval-source-map',
+	devtool: isProd ? 'source-map' : 'cheap-eval-source-map',
 	context: __dirname + '/src',
 	module: {
 		loaders: [{
@@ -42,7 +42,7 @@ module.exports = [{
 		// new webpack.optimize.UglifyJsPlugin(),
 		new webpack.optimize.OccurrenceOrderPlugin(),
 		new webpack.LoaderOptionsPlugin({
-			debug: false,
+			debug: true,
 			minimize: true
 		})
 	]
