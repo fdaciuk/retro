@@ -1,17 +1,8 @@
 'use strict';
 
 const webpack = require('webpack')
-const path = require('path')
-const fs = require('fs')
-
 const nodeEnv = process.env.NODE_ENV || 'development'
 const isProd = nodeEnv === 'production'
-
-let nodeModules = {}
-
-fs.readdirSync('node_modules')
-	.filter((x) => ['.bin'].indexOf(x) === -1)
-	.forEach((mod) => nodeModules[mod] = 'commonjs ' + mod)
 
 module.exports = {
 	target: 'electron',
