@@ -53,6 +53,7 @@ export default class Editor extends Component {
         ace.require('ace/ext/emmet')
 
         const code = ace.edit(this.refs.editor)
+        code.setKeyboardHandler('ace/keyboard/vim')
         code.setTheme('ace/theme/retro')
         code.setOptions({
             showPrintMargin: false,

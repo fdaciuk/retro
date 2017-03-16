@@ -20,4 +20,4 @@ indent_style = tab
 # Indentation override for all JS and TPL files
 [*.{js}]
 indent_style = space
-indent_size = 4
+indent_size = 2
